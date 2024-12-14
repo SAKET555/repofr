@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f3f4f6; /* Light gray background */
+  color: #1f2937; /* Darker gray for better readability */
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #f59e0b; /* Tailwind's yellow-500 */
+  transition: color 0.3s ease;
+}
+
+/* Header Styles */
+header {
+  background-color: #2563eb; /* Tailwind's blue-600 */
+  padding: 16px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+header:hover {
+  background-color: #1d4ed8; /* Darker blue for hover effect */
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin: 0;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #fbbf24; /* Tailwind's yellow-400 */
+  color: #1f2937; /* Dark gray text */
+  transform: translateY(-2px);
+  border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1f2937; /* Dark gray background */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 10px;
+  font-size: 14px;
+}
+
+/* Button Styles */
+button {
+  background-color: #3b82f6; /* Tailwind's blue-500 */
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 12px 36px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #2563eb; /* Tailwind's blue-600 */
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+}
+
+/* Form Styles */
+input,
+textarea,
+button {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+input[type="email"],
+input[type="password"],
+textarea {
+  border: 1px solid #d1d5db; /* Light border for inputs */
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6; /* Focus border */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Signup Form */
+.signup-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  margin: auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.signup-form:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.signup-form h2 {
+  font-size: 28px;
+  color: #2563eb; /* Tailwind's blue-600 */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-form label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4b5563; /* Tailwind's gray-600 */
+}
+
+/* Profile Page */
+.profile-page {
+  background-color: #ffffff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-page h2 {
+  font-size: 28px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.profile-page p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+/* Home Page */
+.home-page {
+  background-image: linear-gradient(to right, #2563eb, #fbbf24); /* Blue and Yellow gradient */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-page h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.home-page p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.home-page button {
+  background-color: #fbbf24; /* Tailwind's yellow-400 */
+  color: black;
+  border-radius: 50px;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.home-page button:hover {
+  background-color: #f59e0b; /* Tailwind's yellow-500 */
+}
+
+/* General Layout Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .signup-form,
+  .profile-page {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .home-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-page p {
+    font-size: 1.125rem;
+  }
+
+  .home-page button {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page h1 {
+    font-size: 2rem;
+  }
+
+  .home-page button {
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+}
